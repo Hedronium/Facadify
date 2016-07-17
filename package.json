@@ -1,7 +1,7 @@
 {
   "name": "facadify",
   "version": "1.0.0",
-  "description": "Make Facades out of any Object",
+  "description": "Larabel like global Facades in Javascript.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -20,5 +20,14 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hedronium/Facadify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hedronium/Facadify/issues"
+  },
+  "homepage": "https://github.com/Hedronium/Facadify#readme"
 }
