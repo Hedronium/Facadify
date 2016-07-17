@@ -64,8 +64,8 @@ You can reach to the root instance of the facade with the `facade.getFacadeRoot(
 
 ```JS
 var x = {
-	action: 'jump', 
-    do_something: function() { return this.action; } 
+	action: 'jump',
+    do_something: function() { return this.action; }
 };
 
 var facade = {};
@@ -80,13 +80,13 @@ You can swap out the root instance of the facade with anything else if you like 
 
 ```JS
 var x = {
-	action: 'jump', 
-    do_something: function() { return this.action; } 
+	action: 'jump',
+    do_something: function() { return this.action; }
 };
 
 var y = {
-	action: 'run', 
-    do_something: function() { return this.action; } 
+	action: 'run',
+    do_something: function() { return this.action; }
 };
 
 var facade = {};
@@ -95,3 +95,6 @@ facade.swapFacadeRoot(y);
 
 console.log(facade.do_something()); // run
 ```
+
+## Testing
+Just install all dev dependencies and run `npm test` and watch the magic unfold.
