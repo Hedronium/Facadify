@@ -1,5 +1,5 @@
 {
-  "name": "facadize",
+  "name": "facadify",
   "version": "1.0.0",
   "description": "Make Facades out of any Object",
   "main": "index.js",

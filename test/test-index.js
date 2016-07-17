@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
-var facadize = require('../index.js');
+var facadify = require('../index.js');
 
-describe('facadize', function() {
+describe('facadify', function() {
     it('should return the facade', function() {
         var x = {
             something: 'something',
@@ -13,7 +13,7 @@ describe('facadize', function() {
         var y = {};
 
         assert.isTrue(
-            facadize(x, y) === y,
+            facadify(x, y) === y,
             'Does not return the facade'
         );
     });
@@ -25,7 +25,7 @@ describe('facadize', function() {
         };
         var y = {};
 
-        facadize(x, y);
+        facadify(x, y);
 
         assert.isTrue(
             ('say_something' in y) && ('say_something_else' in y),
@@ -42,7 +42,7 @@ describe('facadize', function() {
 
         var y = {};
 
-        facadize(x, y);
+        facadify(x, y);
 
         assert.isFalse(
             ('something' in y) || ('something_else' in y),
@@ -55,7 +55,7 @@ describe('facadize', function() {
         var x = {do_something: function(){ triggered = true; }};
         var y = {};
 
-        facadize(x, y);
+        facadify(x, y);
 
         y.do_something();
 
@@ -67,7 +67,7 @@ describe('facadize', function() {
         var x = {do_something: function(is_triggered){ triggered = is_triggered; }};
         var y = {};
 
-        facadize(x, y);
+        facadify(x, y);
 
         y.do_something('potato');
         assert.isTrue(triggered === 'potato', 'Not holding refference to root object.');
@@ -78,7 +78,7 @@ describe('facadize', function() {
         var x = {do_something: function(){ triggered = true; }};
         var y = {};
 
-        facadize(x, y);
+        facadify(x, y);
 
         assert.isTrue(y.getFacadeRoot() === x, 'Not holding refference to root object.');
     });
@@ -95,7 +95,7 @@ describe('facadize', function() {
 
         var z = {something: 'something else'};
 
-        facadize(x, y);
+        facadify(x, y);
 
         assert.isFalse(
             (y.do_something.bind(z))() === 'doing something else',
@@ -115,7 +115,7 @@ describe('facadize', function() {
 
         var z = {something: 'something else'};
 
-        facadize(x, y);
+        facadify(x, y);
 
         assert.isFalse(
             (y.do_something.bind(z))() === 'doing something else',
@@ -129,7 +129,7 @@ describe('facadize', function() {
             var y = { do_something_else: function(){} };
 
             var z = {};
-            facadize(x, z);
+            facadify(x, z);
 
             z.swapFacadeRoot(y);
 
@@ -149,7 +149,7 @@ describe('facadize', function() {
             var y = { do_something_else: function(){} };
 
             var z = {};
-            facadize(x, z);
+            facadify(x, z);
 
             z.swapFacadeRoot(y);
 
@@ -164,7 +164,7 @@ describe('facadize', function() {
             var y = { do_something_else: function(){} };
 
             var z = {};
-            facadize(x, z);
+            facadify(x, z);
 
             z.swapFacadeRoot(y);
 
@@ -179,7 +179,7 @@ describe('facadize', function() {
             var y = { a: 'asteroid', do_something: function(){ return this.a; } };
 
             var z = {};
-            facadize(x, z);
+            facadify(x, z);
 
             z.swapFacadeRoot(y);
 

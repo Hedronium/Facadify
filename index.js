@@ -1,4 +1,4 @@
-module.exports = function facadize(instance, facade) {
+module.exports = function facadify(instance, facade) {
     facade = facade || {};
     facade.__facadeRoot = instance;
     facade.__addedFacadeMethods = [];
@@ -14,7 +14,7 @@ module.exports = function facadize(instance, facade) {
             delete facade[method];
         }
 
-        facadize(new_instance, facade);
+        facadify(new_instance, facade);
     }
 
     for (var property in instance) {
