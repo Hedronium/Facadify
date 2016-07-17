@@ -1,7 +1,7 @@
 {
   "name": "facadify",
   "version": "1.0.0",
-  "description": "Larabel like global Facades in Javascript.",
+  "description": "Laravel like global Facades in Javascript.",
   "main": "index.js",
   "directories": {
     "test": "test"
