@@ -1,5 +1,5 @@
 # Facadify
--------------------------------------------
+
 Laravel like global Facades in [Node](https://nodejs.org/en/), [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/)!
 
 > ... and most other CommonJS loaders.
