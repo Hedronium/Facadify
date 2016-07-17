@@ -1,0 +1,24 @@
+{
+  "name": "facadize",
+  "version": "1.0.0",
+  "description": "Make Facades out of any Object",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "facade",
+    "object",
+    "module",
+    "loader"
+  ],
+  "author": "Omran Jamal <o.jamal97@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
